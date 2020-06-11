@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', (e)=>{
     er.textContent='content is loading';
     mes.textContent='';
 
-    fetch('http://localhost:1337/weather?address=' + location).then((response)=>{
+    fetch('/weather?address=' + location).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             er.innerHTML=data.error;

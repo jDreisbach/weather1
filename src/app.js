@@ -7,6 +7,8 @@ const weather=require('../utilities/weather');
 const app = express();
 const address = process.argv[2];
 
+//setup heroku port with local backup
+const port = process.env.PORT || 3000;
 
 //Define paths for express configuration
 const publicDirectory=path.join(__dirname, '../');
@@ -107,6 +109,6 @@ app.get('*',(req, res)=>{
     });
 });
 
-app.listen(1337, ()=>{
-    console.log('server is connected on port 3000.');
+app.listen(port, ()=>{
+    console.log('server is connected on port ' + port);
 });
