@@ -14,7 +14,9 @@ const weather = (latitude, longitude, callback)=>{
                     Weather: body.current.weather_descriptions[0],
                     Temperature: body.current.temperature,
                     Precip: body.current.precip,
-                    realFeel: body.current.feelslike
+                    realFeel: body.current.feelslike,
+                    humidity: body.current.humidity,
+                    observed: body.current.observation_time
                 });
             };
         }

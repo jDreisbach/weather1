@@ -23,7 +23,7 @@ weatherForm.addEventListener('submit', (e)=>{
         }
        else{
            er.innerHTML=data.location;
-           mes.innerHTML='It is currently ' + data.Forecast.Weather + ' and ' + data.Forecast.Temperature + ' degrees.  Although it feels like ' + data.Forecast.realFeel + ' degrees, with a ' + data.Forecast.Precip + ' Percent chance of rain.';
+           mes.innerHTML='It is currently ' + data.Forecast.Weather + ' and ' + data.Forecast.Temperature + ' degrees.  Although it feels like ' + data.Forecast.realFeel + ' degrees, with a ' + data.Forecast.Precip + ' Percent chance of rain. There is ' + data.Forecast.humidity + ' percent humidity.  These readings were observed at ' + data.Forecast.observed + '.';
 
            console.log(data.Forecast)
            
